@@ -6,4 +6,4 @@ phases:
       - zip -r lambda_function_${CODEBUILD_BUILD_NUMBER}.zip lambda_function.py
       - echo lambda_function_${CODEBUILD_BUILD_NUMBER}.zip > file_lambda_function
       - aws s3 cp lambda_function_${CODEBUILD_BUILD_NUMBER}.zip s3://testing-0809/lambda_function_${CODEBUILD_BUILD_NUMBER}.zip
-      - aws lambda update-function-code --function-name testing0808 --s3-bucket testing-0809 --s3-key `cat file_lambda_function`
+      - aws lambda update-function-code --function-name lambdatesting --s3-bucket testing-0809 --s3-key `cat file_lambda_function`
